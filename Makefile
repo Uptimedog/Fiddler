@@ -5,7 +5,7 @@ tox ?= tox
 
 help: Makefile
 	@echo
-	@echo " Choose a command run in Fiddler:"
+	@echo " Choose a command run in Crlo:"
 	@echo
 	@sed -n 's/^##//p' $< | column -t -s ':' |  sed -e 's/^/ /'
 	@echo

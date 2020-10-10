@@ -1,14 +1,14 @@
-.. image:: https://img.shields.io/pypi/v/Fiddler.svg
+.. image:: https://img.shields.io/pypi/v/Crlo.svg
     :alt: PyPI-Server
-    :target: https://pypi.org/project/Fiddler/
-.. image:: https://github.com/Uptimedog/Fiddler/actions/workflows/ci.yml/badge.svg
+    :target: https://pypi.org/project/Crlo/
+.. image:: https://github.com/Uptimedog/Crlo/actions/workflows/ci.yml/badge.svg
     :alt: Build Status
-    :target: https://github.com/Uptimedog/Fiddler/actions/workflows/ci.yml
+    :target: https://github.com/Uptimedog/Crlo/actions/workflows/ci.yml
 
 |
 
 ========
-Fiddler
+Crlo
 ========
 
     AIOps SDK in Python.
