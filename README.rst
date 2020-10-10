@@ -11,7 +11,7 @@
 Fiddler
 ========
 
-    AIOps Python SDK in Python.
+    AIOps SDK in Python.
 
 
 Note
