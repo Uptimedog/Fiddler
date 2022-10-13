@@ -1,6 +1,6 @@
 # MIT License
 #
-# Copyright (c) 2023 Clivern
+# Copyright (c) 2024 Clivern
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -24,23 +24,11 @@ import logging
 
 
 class Logger:
-    """Logger Class
-
-    Attributes:
-        loggers: A dict of loggers
-    """
 
     loggers = {}
 
     def get_logger(self, name=__name__):
-        """Get logger instance by name
 
-        Args:
-            name: logger identifier
-
-        Returns:
-            An instance of logging.Logger
-        """
         if name in self.loggers:
             return self.loggers[name]
 

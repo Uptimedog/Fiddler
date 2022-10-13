@@ -1,6 +1,6 @@
 # MIT License
 #
-# Copyright (c) 2023 Clivern
+# Copyright (c) 2024 Clivern
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -20,20 +20,45 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+import requests
 
-import sys
 
-if sys.version_info[:2] >= (3, 8):
-    # TODO: Import directly (no need for conditional) when `python_requires = >= 3.8`
-    from importlib.metadata import PackageNotFoundError, version  # pragma: no cover
-else:
-    from importlib_metadata import PackageNotFoundError, version  # pragma: no cover
+class Client:
 
-try:
-    # Change here if project is renamed and does not equal the package name
-    dist_name = "alertify"
-    __version__ = version(dist_name)
-except PackageNotFoundError:  # pragma: no cover
-    __version__ = "unknown"
-finally:
-    del version, PackageNotFoundError
+    def __init__(self, base_url):
+        self.base_url = base_url
+
+    def create_document(self, content, metadata):
+        url = f"{self.base_url}/api/v1/document"
+
+        headers = {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
+
+        data = {
+            'content': content,
+            'metadata': metadata
+        }
+
+        response = requests.post(url, json=data, headers=headers)
+
+        return response.json()
+
+    def search_documents(self, text, metadata, limit):
+        url = f"{self.base_url}/api/v1/document/search"
+
+        headers = {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
+
+        data = {
+            'text': text,
+            'limit': limit,
+            'metadata': metadata
+        }
+
+        response = requests.post(url, json=data, headers=headers)
+
+        return response.json()

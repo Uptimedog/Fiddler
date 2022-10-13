@@ -1,6 +1,6 @@
 # MIT License
 #
-# Copyright (c) 2023 Clivern
+# Copyright (c) 2024 Clivern
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -24,5 +24,4 @@ import pytest
 
 
 def test_logger():
-
     assert True == True

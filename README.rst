@@ -1,20 +1,20 @@
-.. image:: https://img.shields.io/pypi/v/Crlo.svg
+.. image:: https://img.shields.io/pypi/v/pytyran.svg
     :alt: PyPI-Server
-    :target: https://pypi.org/project/Crlo/
-.. image:: https://github.com/Uptimedog/Crlo/actions/workflows/ci.yml/badge.svg
+    :target: https://pypi.org/project/pytyran/
+.. image:: https://github.com/Uptimedog/pytyran/actions/workflows/ci.yml/badge.svg
     :alt: Build Status
-    :target: https://github.com/Uptimedog/Crlo/actions/workflows/ci.yml
+    :target: https://github.com/Uptimedog/pytyran/actions/workflows/ci.yml
 
 |
 
 ========
-Crlo
+pytyran
 ========
 
-    AIOps SDK in Python.
+    Tyran SDK in Python.
 
 
 Note
 ====
 
-This project is created and maintained for Uptimedog. see https://github.com/Uptimedog
+This project is created and maintained for Tyran. see https://github.com/Clivern/Tyran

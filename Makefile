@@ -5,7 +5,7 @@ tox ?= tox
 
 help: Makefile
 	@echo
-	@echo " Choose a command run in Crlo:"
+	@echo " Choose a command run in PyTyran:"
 	@echo
 	@sed -n 's/^##//p' $< | column -t -s ':' |  sed -e 's/^/ /'
 	@echo
