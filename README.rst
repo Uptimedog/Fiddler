@@ -1,9 +1,9 @@
 .. image:: https://img.shields.io/pypi/v/pytyran.svg
     :alt: PyPI-Server
     :target: https://pypi.org/project/pytyran/
-.. image:: https://github.com/Uptimedog/pytyran/actions/workflows/ci.yml/badge.svg
+.. image:: https://github.com/clivern/pytyran/actions/workflows/ci.yml/badge.svg
     :alt: Build Status
-    :target: https://github.com/Uptimedog/pytyran/actions/workflows/ci.yml
+    :target: https://github.com/clivern/pytyran/actions/workflows/ci.yml
 
 |
 
