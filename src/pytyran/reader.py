@@ -20,32 +20,14 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-import requests
 
+class Reader:
 
-class Client:
-
-    def __init__(self, base_url):
-        self.base_url = base_url
-
-    def create_document(self, content, metadata):
-        url = f"{self.base_url}/api/v1/document"
-
-        headers = {"Accept": "application/json", "Content-Type": "application/json"}
-
-        data = {"content": content, "metadata": metadata}
-
-        response = requests.post(url, json=data, headers=headers)
-
-        return response.json()
-
-    def search_documents(self, text, metadata, limit):
-        url = f"{self.base_url}/api/v1/document/search"
-
-        headers = {"Accept": "application/json", "Content-Type": "application/json"}
-
-        data = {"text": text, "limit": limit, "metadata": metadata}
-
-        response = requests.post(url, json=data, headers=headers)
-
-        return response.json()
+    def read_file(self, file_path):
+        try:
+            with open(file_path, "r") as file:
+                return file.read()
+        except FileNotFoundError:
+            raise Exception(f"Error: File '{file_path}' not found.")
+        except IOError:
+            raise Exception(f"Error: Unable to read file '{file_path}'.")
