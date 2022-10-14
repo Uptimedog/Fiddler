@@ -35,9 +35,7 @@ class Client:
 
         data = {"content": content, "metadata": metadata}
 
-        response = requests.post(url, json=data, headers=headers)
-
-        return response.json()
+        return requests.post(url, json=data, headers=headers)
 
     def search_documents(self, text, metadata, limit):
         url = f"{self.base_url}/api/v1/document/search"
@@ -46,6 +44,4 @@ class Client:
 
         data = {"text": text, "limit": limit, "metadata": metadata}
 
-        response = requests.post(url, json=data, headers=headers)
-
-        return response.json()
+        return requests.post(url, json=data, headers=headers)
