@@ -42,6 +42,17 @@ class Client:
 
         return requests.post(url, json=data, headers=headers)
 
+    def delete_document(self, uuid):
+        url = f"{self._base_url}/api/v1/document/{uuid}"
+
+        headers = {
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+            "X-API-Key": self._api_key,
+        }
+
+        return requests.delete(url, headers=headers)
+
     def search_documents(self, text, metadata, limit):
         url = f"{self._base_url}/api/v1/document/search"
 
